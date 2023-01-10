@@ -11,4 +11,6 @@ export class JavaVarComponent {
   detailsCours(){
     this.router.navigate(['quiz']);
   }
+
+  
 }
