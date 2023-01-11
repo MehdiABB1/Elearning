@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { JavaArraysComponent } from './java-arrays/java-arrays.component';
+import { JavaConditionalsComponent } from './java-conditionals/java-conditionals.component';
 import { JavaDetailComponent } from './java-detail/java-detail.component';
+import { JavaLoopsComponent } from './java-loops/java-loops.component';
+import { JavaObjectOrComponent } from './java-object-or/java-object-or.component';
 import { JavaVarComponent } from './java-var/java-var.component';
 import { JavaComponent } from './java/java.component';
+import { QuestionsComponent } from './questions/questions.component';
 import { QuizJavaUnComponent } from './quiz-java-un/quiz-java-un.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -12,7 +18,35 @@ const routes: Routes = [
   {path:'var', component:JavaVarComponent},
   {path:'detail', component:JavaDetailComponent},
   {path:'quiz', component:QuizJavaUnComponent},
-  {path:'' ,redirectTo :'home', pathMatch: 'full'}
+  {
+    path: '',
+    redirectTo: 'questions',
+    pathMatch: 'full',
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+  },
+  {
+    path: 'questions',
+    component: QuestionsComponent,
+  },
+  {
+    path: 'arrays',
+    component: JavaArraysComponent,
+  },
+  {
+    path: 'conditionals',
+    component: JavaConditionalsComponent,
+  },
+  {
+    path: 'loops',
+    component: JavaLoopsComponent,
+  },
+  {
+    path: 'oob',
+    component: JavaObjectOrComponent,
+  },
 ];
 
 @NgModule({

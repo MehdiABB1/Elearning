@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class JavaVarComponent {
   constructor( private router: Router){}
   detailsCours(){
-    this.router.navigate(['quiz']);
+    this.router.navigate(['oob']);
   }
 
   

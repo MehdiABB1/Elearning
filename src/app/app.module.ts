@@ -8,19 +8,36 @@ import { JavaComponent } from './java/java.component';
 import { JavaVarComponent } from './java-var/java-var.component';
 import { JavaDetailComponent } from './java-detail/java-detail.component';
 import { QuizJavaUnComponent } from './quiz-java-un/quiz-java-un.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { QuestionsComponent } from './questions/questions.component';
+import { JavaObjectOrComponent } from './java-object-or/java-object-or.component';
+import { JavaConditionalsComponent } from './java-conditionals/java-conditionals.component';
+import { JavaArraysComponent } from './java-arrays/java-arrays.component';
+import { JavaLoopsComponent } from './java-loops/java-loops.component';
+
 
 @NgModule({
   declarations: [
+  
     AppComponent,
     HomeComponent,
     JavaComponent,
     JavaVarComponent,
     JavaDetailComponent,
-    QuizJavaUnComponent
+    QuizJavaUnComponent,
+    QuestionsComponent,
+    JavaObjectOrComponent,
+    JavaConditionalsComponent,
+    JavaArraysComponent,
+    JavaLoopsComponent,
   ],
   imports: [
+  
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
