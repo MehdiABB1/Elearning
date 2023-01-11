@@ -15,6 +15,8 @@ import { JavaObjectOrComponent } from './java-object-or/java-object-or.component
 import { JavaConditionalsComponent } from './java-conditionals/java-conditionals.component';
 import { JavaArraysComponent } from './java-arrays/java-arrays.component';
 import { JavaLoopsComponent } from './java-loops/java-loops.component';
+import { ChangeBgDirective } from './change-bg.directive';
+import { CertificatJavaComponent } from './certificat-java/certificat-java.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { JavaLoopsComponent } from './java-loops/java-loops.component';
     JavaConditionalsComponent,
     JavaArraysComponent,
     JavaLoopsComponent,
+    ChangeBgDirective,
+    CertificatJavaComponent
   ],
   imports: [
   

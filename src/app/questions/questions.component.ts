@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { QuestionService } from '../service/question.service';
 
@@ -20,7 +21,7 @@ export class QuestionsComponent implements OnInit {
   interval$: any;
   progress: string = "0";
   isQuizCompleted : boolean = false;
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService , private router:Router) { }
 
   ngOnInit(): void {
     this.name = localStorage.getItem("name")!;
@@ -37,10 +38,11 @@ export class QuestionsComponent implements OnInit {
   }
   nextQuestion() {
     this.currentQuestion++;
+    this.resetCounter();
   }
-  previousQuestion() {
-    this.currentQuestion--;
-  }
+  // previousQuestion() {
+  //   this.currentQuestion--;
+  // }
   answer(currentQno: number, option: any) {
 
     if(currentQno === this.questionList.length){
@@ -65,7 +67,7 @@ export class QuestionsComponent implements OnInit {
         this.getProgressPercent();
       }, 1000);
 
-      this.points -= 10;
+      // this.points -= 10;
     }
   }
   startCounter() {
@@ -75,7 +77,7 @@ export class QuestionsComponent implements OnInit {
         if (this.counter === 0) {
           this.currentQuestion++;
           this.counter = 60;
-          this.points -= 10;
+          // this.points -= 10;
         }
       });
     setTimeout(() => {
@@ -104,5 +106,12 @@ export class QuestionsComponent implements OnInit {
     this.progress = ((this.currentQuestion / this.questionList.length) * 100).toString();
     return this.progress;
 
+  }
+
+  getCertif(){
+    this.router.navigate(['certif']);
+  }
+  reload(){
+    window.location.reload();
   }
 }

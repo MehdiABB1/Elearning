@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CertificatJavaComponent } from './certificat-java/certificat-java.component';
 import { HomeComponent } from './home/home.component';
 import { JavaArraysComponent } from './java-arrays/java-arrays.component';
 import { JavaConditionalsComponent } from './java-conditionals/java-conditionals.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'oob',
     component: JavaObjectOrComponent,
+  },
+  {
+    path: 'certif',
+    component: CertificatJavaComponent,
   },
 ];
 

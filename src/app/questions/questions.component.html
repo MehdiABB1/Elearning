@@ -168,37 +168,38 @@
                                 <h3>{{questionList[currentQuestion]?.questionText}}</h3>
                             </div>
                         </div>
-                        <div class="options">
-                            <ol *ngFor="let option of questionList[currentQuestion]?.options">
+                        <div class="">
+                            <ol *ngFor="let option of questionList[currentQuestion]?.options; index as i;">
                                 <li (click)="answer(currentQuestion+1,option)">
-                                    <div appChangeBg class="card">
-                                        {{option.text}}
+                                    <div appChangeBg [isCorrect]="option.correct" class="card">
+                                       {{i+1}} {{option.text}}
                                     </div>
                                 </li>
 
                             </ol>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"><i
-                                    class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i></button>
+                            <!-- <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"><i
+                                    class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i></button> -->
                             <button class="btn" (click)="resetQuiz()"><i class="fa fa-refresh text-primary fa-3x"
                                     aria-hidden="true"></i></button>
-                            <button class="btn" (click)="nextQuestion()"><i
+                            <button [disabled]="currentQuestion===questionList.length-1" class="btn" (click)="nextQuestion()"><i
                                     class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true"></i></button>
                         </div>
                     </ng-container>
 
                     <ng-container *ngIf="isQuizCompleted">
+
                         <div class="row d-flex justify-content-between">
-                            <img style="width: 50%;" class="img-fluid col-sm-12 mx-auto"
-                                src="https://icon-library.com/images/celebration-icon-png/celebration-icon-png-7.jpg"
-                                alt="">
+                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
                             <div class="result text-center col-md-6 col-sm-12">
                                 <h3>Congratulations!! <br>You have completed the quiz. <br>Below is your result:</h3>
                                 <p>Total Question Attempted : {{questionList.length}} </p>
-                                <p>Total Correct Answered : {{correctAnswer}} </p>
-                                <p>Total Wrong Answered : {{inCorrectAnswer}} </p>
+                                <p>Total Correct Answered :  <span id="correct">{{correctAnswer}}</span> </p>
+                                <p>Total Wrong Answered : <span id="incorrect">{{inCorrectAnswer}}</span> </p>
                                 <p>Your Score : {{points}} Points </p>
+                                <button [hidden]="points >= 70" class="btn btn-primary" onclick="window.location.reload();">reload</button>
+                                <button [hidden]="points < 70" class="btn btn-success" (click)="getCertif()">Get certificate</button>
                             </div>
                         </div>
                     </ng-container>

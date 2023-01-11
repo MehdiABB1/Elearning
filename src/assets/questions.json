@@ -1,172 +1,165 @@
 {
   "questions": [
     {
-      "questionText": "Which of the following does TypeScript use to specify types?",
+      "questionText": "Java is short for JavaScript",
       "options": [
         {
-          "text": ":",
+          "text": "False",
           "correct": true
         },
         {
-          "text": ";"
-        },
-        {
-          "text": "!"
-        },
-        {
-          "text": "&"
+          "text": "True"
         }
+       
       ],
       "explanation": "TS uses a colon (:) to separate the property name from the property type"
     },
     {
-      "questionText": "Which of the following is NOT a type used in TypeScript?",
+      "questionText": "How do you insert COMMENTS in Java code?",
       "options": [
+      
         {
-          "text": "number"
+          "text": "/* This is a comment"
         },
         {
-          "text": "string"
+          "text": "# This is a comment"
         },
         {
-          "text": "boolean"
-        },
-        {
-          "text": "enum",
+          "text": "// This is a comment ",
           "correct": true
         }
       ],
       "explanation": "enum is not used as a type in TypeScript"
     },
     {
-      "questionText": "How can we specify properties and methods for an object in TypeScript?",
+      "questionText": "Which data type is used to create a variable that should store text?",
       "options": [
         {
-          "text": "Use classes."
+          "text": "myString"
         },
         {
-          "text": "Use interfaces.",
+          "text": "String",
           "correct": true
         },
         {
-          "text": "Use enums."
+          "text": "Txt"
         },
         {
-          "text": "Use async/await."
+          "text": "string"
         }
       ],
       "explanation": "interfaces are typically used to list the properties and methods for an object"
     },
     {
-      "questionText": "How else can Array<number> be written in TypeScript?",
+      "questionText": "How do you create a variable with the numeric value 5?",
       "options": [
         {
-          "text": "@number"
+          "text": "float x = 5;"
         },
         {
-          "text": "number[]",
+          "text": "int x = 5;  ",
           "correct": true
         },
         {
-          "text": "number!"
+          "text": "x = 5;"
         },
         {
-          "text": "number?"
+          "text": "num x = 5"
         }
       ],
       "explanation": "number[] is another way of writing Array<number> in TypeScript"
     },
     {
-      "questionText": "In which of these does a class take parameters?",
+      "questionText": "How do you create a variable with the floating number 2.8?",
       "options": [
         {
-          "text": "constructor",
+          "text": "float x = 2.8f; ",
           "correct": true
         },
         {
-          "text": "destructor"
+          "text": "int x = 2.8f;"
         },
         {
-          "text": "import"
+          "text": "byte x = 2.8f"
         },
         {
-          "text": "subscribe"
+          "text": "x = 2.8f;"
         }
       ],
       "explanation": "a constructor is used by a class to take in parameters"
     },
     {
-      "questionText": "Which is NOT an access modifier?",
+      "questionText": "Which method can be used to find the length of a string?",
       "options": [
         {
-          "text": "private"
+          "text": "getSize()"
         },
         {
-          "text": "protected"
+          "text": "len()"
         },
         {
-          "text": "public"
+          "text": "getLength()"
         },
         {
-          "text": "async",
+          "text": "length() ",
           "correct": true
         }
       ],
       "explanation": "async is not used as an access modifier type in TypeScript"
     },
     {
-      "questionText": "Which keyword allows us to share information between files in TypeScript?",
+      "questionText": "Which operator can be used to compare two values?",
       "options": [
         {
-          "text": "import"
+          "text": "="
         },
         {
-          "text": "export",
+          "text": "== ",
           "correct": true
         },
         {
-          "text": "async"
+          "text": "<>"
         },
         {
-          "text": "constructor"
+          "text": "><"
         }
       ],
       "explanation": "the export keyword allows for the information to be transmitted between files"
     },
     {
-      "questionText": "Which is an array method to generate a new array based on a condition?",
+      "questionText": "Which keyword is used to create a class in Java?",
       "options": [
         {
-          "text": "filter",
+          "text": "class",
           "correct": true
         },
         {
-          "text": "map"
+          "text": "class()"
         },
         {
-          "text": "async"
+          "text": "className"
         },
         {
-          "text": "enum"
+          "text": "MyClass"
         }
       ],
       "explanation": "filter is a method used to conditionally create a new array"
     },
     {
-      "questionText": "How is a property accessible within a class?",
+      "questionText": "What is the correct way to create an object called myObj of MyClass?",
       "options": [
         {
-          "text": "Using this.propertyName",
+          "text": "MyClass myObj = new MyClass();  ",
           "correct": true
         },
         {
-          "text": "Accessors"
+          "text": "class myObj = new MyClass();"
         },
         {
-          "text": "Destructuring"
+          "text": "class MyClass = new myObj();"
         },
         {
-          "text": "Arrow function"
+          "text": "new myObj = MyClass();"
         }
       ],
       "explanation": "this.propertyName is the way to access a specific property within a class"
