@@ -10,7 +10,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active" style="min-height: 300px;">
-                <img class="position-relative w-100" src="../assets/img/carousel-1.jpg" style="min-height: 300px; object-fit: cover;">
+                <img class="position-relative w-100" src="../assets/img/carousel-5.jpg" style="min-height: 300px; object-fit: cover;">
                 <div class="carousel-caption d-flex align-items-center justify-content-center">
                     <div class="p-5" style="width: 100%; max-width: 900px;">
                         <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="../assets/app2/img/about.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="../assets/app2/img/about2.jpg" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -213,8 +213,8 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
-                        <button (click)="detailsCours()" class="btn btn-info">Details </button>
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
+                        <button routerLink="/detail" class="btn btn-primary">Course Detail </button>
+                       
                     </div>
                 </div>
             </div>
@@ -229,14 +229,15 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
+                        <button routerLink="/uml" class="btn btn-primary">Course Detail </button>
+                       
                     </div>
                 </div>
             </div>
             <div class="courses-item position-relative col-lg-3 col-md-6 mb-4">
                 <img class="img-fluid" src="../assets/app2/img/courses-4.jpg" alt="">
                 <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
+                    <h4 class="text-center text-white px-3">Angular</h4>
                     <div class="border-top w-100 mt-3">
                         <div class="d-flex justify-content-between p-4">
                             <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
@@ -244,14 +245,14 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
+                        <button disabled="true" routerLink="/uml" class="btn btn-primary">Comming soon </button>
                     </div>
                 </div>
             </div>
             <div class="courses-item position-relative col-lg-3 col-md-6 mb-4">
                 <img class="img-fluid" src="../assets/app2/img/courses-3.jpg" alt="">
                 <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
+                    <h4 class="text-center text-white px-3">Python</h4>
                     <div class="border-top w-100 mt-3">
                         <div class="d-flex justify-content-between p-4">
                             <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
@@ -259,7 +260,8 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
+                        <button disabled="true" routerLink="/uml" class="btn btn-primary">Comming soon </button>
+                       
                     </div>
                 </div>
             </div>
@@ -270,7 +272,7 @@
     <!-- Courses End -->
   
   <!-- Courses Start -->
-  <div class="container-fluid py-5">
+  <!-- <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="text-center mb-5">
             <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5>
@@ -387,7 +389,7 @@
             </div>
         </div>
     </div>
-  </div>
+  </div> -->
   <!-- Courses End -->
   
   
@@ -400,13 +402,11 @@
                     <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Need Any Courses</h5>
                     <h1 class="text-white">30% Off For New Students</h1>
                 </div>
-                <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                    ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                    dolor</p>
+                <p class="text-white"></p>
                 <ul class="list-inline text-white m-0">
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Courses</li>
+                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Quizzes</li>
+                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Certification.</li>
                 </ul>
             </div>
             <div class="col-lg-5">
@@ -463,7 +463,7 @@
                     </div>
                     <div class="bg-secondary p-4">
                         <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
+                        <p class="m-0">Java programmer</p>
                     </div>
                 </div>
             </div>
@@ -479,7 +479,7 @@
                     </div>
                     <div class="bg-secondary p-4">
                         <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
+                        <p class="m-0">Java programmer</p>
                     </div>
                 </div>
             </div>
@@ -495,7 +495,7 @@
                     </div>
                     <div class="bg-secondary p-4">
                         <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
+                        <p class="m-0">UML</p>
                     </div>
                 </div>
             </div>
@@ -511,7 +511,7 @@
                     </div>
                     <div class="bg-secondary p-4">
                         <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
+                        <p class="m-0">UML</p>
                     </div>
                 </div>
             </div>
@@ -525,7 +525,7 @@
   
   
   <!-- Blog Start -->
-  <div class="container-fluid py-5">
+  <!-- <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-5">
             <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Our Blog</h5>
@@ -561,6 +561,6 @@
             </div>
         </div>
     </div>
-  </div>
+  </div> -->
   <!-- Blog End -->
   

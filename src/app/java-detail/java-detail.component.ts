@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class JavaDetailComponent {
   constructor( private router: Router){}
   detailsCours(){
-    this.router.navigate(['java']);
+    this.router.navigate(['welcome']);
   }
 }

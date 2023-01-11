@@ -11,6 +11,9 @@ import { JavaVarComponent } from './java-var/java-var.component';
 import { JavaComponent } from './java/java.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { QuizJavaUnComponent } from './quiz-java-un/quiz-java-un.component';
+import { UmlArchitectureComponent } from './uml-architecture/uml-architecture.component';
+import { UmlClassComponent } from './uml-class/uml-class.component';
+import { UmlOverviewComponent } from './uml-overview/uml-overview.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
@@ -21,7 +24,7 @@ const routes: Routes = [
   {path:'quiz', component:QuizJavaUnComponent},
   {
     path: '',
-    redirectTo: 'questions',
+    redirectTo: 'overview',
     pathMatch: 'full',
   },
   {
@@ -51,6 +54,18 @@ const routes: Routes = [
   {
     path: 'certif',
     component: CertificatJavaComponent,
+  },
+  {
+    path: 'overview',
+    component: UmlOverviewComponent,
+  },
+  {
+    path: 'architecture',
+    component: UmlArchitectureComponent,
+  },
+  {
+    path: 'class',
+    component: UmlClassComponent,
   },
 ];
 

@@ -17,6 +17,11 @@ import { JavaArraysComponent } from './java-arrays/java-arrays.component';
 import { JavaLoopsComponent } from './java-loops/java-loops.component';
 import { ChangeBgDirective } from './change-bg.directive';
 import { CertificatJavaComponent } from './certificat-java/certificat-java.component';
+import { UmlOverviewComponent } from './uml-overview/uml-overview.component';
+import { UmlArchitectureComponent } from './uml-architecture/uml-architecture.component';
+import { UmlStandardComponent } from './uml-standard/uml-standard.component';
+import { UmlClassComponent } from './uml-class/uml-class.component';
+import { UmlUseCaseComponent } from './uml-use-case/uml-use-case.component';
 
 
 @NgModule({
@@ -34,7 +39,12 @@ import { CertificatJavaComponent } from './certificat-java/certificat-java.compo
     JavaArraysComponent,
     JavaLoopsComponent,
     ChangeBgDirective,
-    CertificatJavaComponent
+    CertificatJavaComponent,
+    UmlOverviewComponent,
+    UmlArchitectureComponent,
+    UmlStandardComponent,
+    UmlClassComponent,
+    UmlUseCaseComponent
   ],
   imports: [
   
