@@ -141,7 +141,7 @@
                         </div>
                         <div class="quiz-header">
                             <h4 style="font-family: cursive;">Java Quiz!</h4>
-                            <span style="font-style: italic;">name {{name}}</span>
+                            <span style="font-style: italic;">name {{name}} {{lastname}}</span>
                         </div>
                     </div>
 
@@ -188,18 +188,20 @@
                         </div>
                     </ng-container>
 
-                    <ng-container *ngIf="isQuizCompleted">
-
+                    <ng-container *ngIf="isQuizCompleted" >
+                        <button onclick="view()" >.</button>
                         <div class="row d-flex justify-content-between">
                             <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-                            <div class="result text-center col-md-6 col-sm-12">
-                                <h3>Congratulations!! <br>You have completed the quiz. <br>Below is your result:</h3>
+                           
+                            <div class="result text-center col-md-12 col-sm-12">
+                            
                                 <p>Total Question Attempted : {{questionList.length}} </p>
                                 <p>Total Correct Answered :  <span id="correct">{{correctAnswer}}</span> </p>
                                 <p>Total Wrong Answered : <span id="incorrect">{{inCorrectAnswer}}</span> </p>
                                 <p>Your Score : {{points}} Points </p>
                                 <button [hidden]="points >= 70" class="btn btn-primary" onclick="window.location.reload();">reload</button>
                                 <button [hidden]="points < 70" class="btn btn-success" (click)="getCertif()">Get certificate</button>
+                           <br>
                             </div>
                         </div>
                     </ng-container>

@@ -29,30 +29,7 @@
    <!-- Libraries Stylesheet -->
    <link href="assets/app2/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
    <link href="assets/app2/css/style.css" rel="stylesheet">
-   <script>
-    window.onload = function() {
-    
-    var chart = new CanvasJS.Chart("chartContainer", {
-      animationEnabled: true,
-      title: {
-        text: "Desktop Search Engine Market Share - 2016"
-      },
-      data: [{
-        type: "pie",
-        startAngle: 240,
-        yValueFormatString: "##0.00\"%\"",
-        indexLabel: "{label} {y}",
-        dataPoints: [
-          {y: document.getElementById('correct').innerHTML, label: "Correct"},
-          {y: document.getElementById('incorrect').innerHTML, label: "Incorrect"},
-        
-        ]
-      }]
-    });
-    chart.render();
-    
-    }
-    </script>
+ 
 
 </head>
 <body>
@@ -103,7 +80,35 @@
   </script>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-  
+  <script>
+    function view() {
+      var correct = document.getElementById('correct').innerHTML;
+      var incorrect = document.getElementById('incorrect').innerHTML;
+
+      correct2 = correct*10;
+      incorrect2 = incorrect*10;
+      console.log(correct,incorrect);
+     var chart = new CanvasJS.Chart("chartContainer", {
+       animationEnabled: true,
+       title: {
+         text: "Congratulations!! You have completed the quiz."
+       },
+       data: [{
+         type: "pie",
+         startAngle: 240,
+         yValueFormatString: "##0\"%\"",
+         indexLabel: "{label} {y}",
+         dataPoints: [
+         {y: correct2, label: "Correct"},
+           {y: incorrect2, label: "Incorrect"},
+         
+         ]
+       }]
+     });
+     chart.render();
+     
+     }
+     </script>
 </body>
 
 </html>

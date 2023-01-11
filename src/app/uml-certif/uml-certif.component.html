@@ -1,0 +1,45 @@
+<div class="container pm-certificate-container" id="GFG">
+    <div class="outer-border"></div>
+    <div class="inner-border"></div>
+
+    <div class="pm-certificate-border col-xs-12">
+
+
+        <div class="certificate">
+
+            <img src="assets/img/ribbon.png" alt="Logo" class="logo">
+            <h1 class="title">CERTIFICATE OF COMPLETION</h1>
+            <div class="content">
+                <h2>This certificate is awarded to</h2>
+                <h3 class="cursive" id="name">{{name}} {{lastname}}</h3>
+                <h2>for successfully completing the</h2>
+                <h3 class="cursive" id="course">UML course</h3>
+                <p class="">with distinction on <span id="date" class="cursive"> 12/01/2023 </span></p>
+            </div>
+            <img src="assets/img/signature.png" alt="Signature" class="signature">
+            <div class="seal-section">
+                <img src="assets/img/selas.png" alt="Seal" class="seal">
+                <h4 class="signatory">Authorized Signatory</h4>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    function printDiv() {
+        var divContents = document.getElementById("GFG").innerHTML;
+        var a = window.open('', '', 'height=500, width=500');
+        a.document.write('<html>');
+        a.document.write('<body > <h1>Div contents are <br>');
+        a.document.write(divContents);
+        a.document.write('</body></html>');
+        a.document.close();
+        a.print();
+    }
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12"> <input type="button" value="Print" class="btn btn-success" onclick="printDiv()"></div>
+    </div>
+</div>

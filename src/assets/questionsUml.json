@@ -1,0 +1,166 @@
+{
+    "questions": [
+      {
+        "questionText": "What does UML mean?",
+        "options": [
+          {
+            "text": "Unified modeling language.",
+            "correct": true
+          },
+          {
+            "text": "Union modeling language."
+          },
+          {
+            "text": "Unified markup language."
+          }
+         
+        ],
+        "explanation": "TS uses a colon (:) to separate the property name from the property type"
+      },
+      {
+        "questionText": "What does the multiplicity 1..* mean? :",
+        "options": [
+        
+          {
+            "text": "Exactly 1"
+          },
+          {
+            "text": "At most one"
+          },
+          {
+            "text": "At least one",
+            "correct": true
+          }
+        ],
+        "explanation": "enum is not used as a type in TypeScript"
+      },
+      {
+        "questionText": "Is aggregation a type of association?",
+        "options": [
+          {
+            "text": "Yes"
+          },
+          {
+            "text": "No",
+            "correct": true
+          },
+          {
+            "text": "Txt"
+          },
+          {
+            "text": "string"
+          }
+        ],
+        "explanation": "interfaces are typically used to list the properties and methods for an object"
+      },
+      {
+        "questionText": "A class diagram belongs to:",
+        "options": [
+          {
+            "text": "Behavioral diagrams"
+          },
+          {
+            "text": "Structural diagrams",
+            "correct": true
+          }
+        ],
+        "explanation": "number[] is another way of writing Array<number> in TypeScript"
+      },
+      {
+        "questionText": "An action that an object can perform is called:",
+        "options": [
+          {
+            "text": "An operation",
+            "correct": true
+          },
+          {
+            "text": "A class"
+          },
+          {
+            "text": "An attribute"
+          },
+          {
+            "text": "A formula"
+          }
+        ],
+        "explanation": "a constructor is used by a class to take in parameters"
+      },
+      {
+        "questionText": "What is an internal use case?",
+        "options": [
+          {
+            "text": "It is a use case that indicates the main functionalities"
+          },
+          {
+            "text": "It is a use case that is linked to an actor."
+          },
+          {
+            "text": "It is a use case that is linked to a secondary actor"
+          },
+          {
+            "text": "It is a use case that is useful to another use case.",
+            "correct": true
+          }
+        ],
+        "explanation": "async is not used as an access modifier type in TypeScript"
+      },
+      {
+        "questionText": "What is a lead actor?",
+        "options": [
+          {
+            "text": "This is a software feature."
+          },
+          {
+            "text": "He is one of the future users of the software",
+            "correct": true
+          },
+          {
+            "text": "This is an action that must be carried out using the software to be developed."
+          },
+          {
+            "text": "It is an entity with which the software has an interaction, but which does not trigger any action."
+          }
+        ],
+        "explanation": "the export keyword allows for the information to be transmitted between files"
+      },
+      {
+        "questionText": "What is an extended relationship?",
+        "options": [
+          {
+            "text": "Use case A may possibly need use case B",
+            "correct": true
+          },
+          {
+            "text": "Use case A is realized before use case B."
+          },
+          {
+            "text": "Use case A still needs use case B."
+          },
+          {
+            "text": "Use case B may possibly need use case A"
+          }
+        ],
+        "explanation": "filter is a method used to conditionally create a new array"
+      },
+      {
+        "questionText": "What is an include relationship?",
+        "options": [
+          {
+            "text": "Use case A still needs use case B. ",
+            "correct": true
+          },
+          {
+            "text": "Use case A is realized before use case B."
+          },
+          {
+            "text": "Use case A may possibly need use case B."
+          },
+          {
+            "text": "Use case B may possibly need use case A"
+          }
+        ],
+        "explanation": "this.propertyName is the way to access a specific property within a class"
+      }
+    ]
+  }
+  

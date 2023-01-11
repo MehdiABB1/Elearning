@@ -11,8 +11,11 @@ import { JavaVarComponent } from './java-var/java-var.component';
 import { JavaComponent } from './java/java.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { QuizJavaUnComponent } from './quiz-java-un/quiz-java-un.component';
+import { QuizUmlComponent } from './quiz-uml/quiz-uml.component';
 import { UmlArchitectureComponent } from './uml-architecture/uml-architecture.component';
+import { UmlCertifComponent } from './uml-certif/uml-certif.component';
 import { UmlClassComponent } from './uml-class/uml-class.component';
+import { UmlDetailComponent } from './uml-detail/uml-detail.component';
 import { UmlOverviewComponent } from './uml-overview/uml-overview.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -66,6 +69,19 @@ const routes: Routes = [
   {
     path: 'class',
     component: UmlClassComponent,
+  },
+  {
+    path: 'detailuml',
+    component: UmlDetailComponent,
+  },
+  
+  {
+    path: 'quizuml',
+    component: QuizUmlComponent,
+  },
+  {
+    path: 'umlcertif',
+    component: UmlCertifComponent,
   },
 ];
 

@@ -1,4 +1,3 @@
-
 <section class="e115apwt6 gamut-7thbzr-VariableProvider e1skjn880">
     <div class="gamut-lyt7cc-Box-ContentContainer e115apwt5">
         <div class="noGridPrint gamut-a6j55f-LayoutGrid e10xj1580">
@@ -28,7 +27,7 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 class="gamut-btivjf-Text e115apwt3">UML class diagram</h1>
+                <h1 class="gamut-btivjf-Text e115apwt3">UML architecture</h1>
             </div>
             <div class="gamut-1rafyms-Column e1y0e4q30">
                 <div class="gamut-199uqwo-FlexBox e115apwt1"><button
@@ -89,187 +88,116 @@
                             </svg>
                         </div>
                         <ul class="gamut-nsd82b-Box ebnwbv90">
-
-
+                          
+                          
                             <li class="gamut-9ngeen-Box eykdu411"><a
                                     class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
                                     routerLink="/overview">UML overview</a></li>
                                     <li class="gamut-9ngeen-Box eykdu411"><a
                                         class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
-                                        routerLink="/architecture">UML architecture
-                                    </a></li>
-                         
-                            <li class="gamut-9ngeen-Box eykdu411"><a
-                                    class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
-                                    routerLink="">UML
-                                    Standard diagrams
-                                </a></li>
-                          
-                                <li class="gamut-9ngeen-Box eykdu411">
-                                    <div aria-current="page" class="gamut-1up4yt5-Box eykdu410"> UML Class diagram</div>
-                                </li>
-                                <li class="gamut-9ngeen-Box eykdu411"><a
-                                    class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
-                                    routerLink="">UML
-                                    use case diagram</a></li>
+                                        routerLink="/architecture">UML architecture</a></li>
+                                
                                     <li class="gamut-9ngeen-Box eykdu411"><a
                                         class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
-                                        routerLink="quizuml">Quiz</a></li>
+                                        routerLink="/standard">UML Standard diagrams
+                                    </a></li>
+                                    <li class="gamut-9ngeen-Box eykdu411"><a
+                                        class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
+                                        routerLink="/class">UML Class diagram
+                                    </a></li>
+                            <li class="gamut-9ngeen-Box eykdu411"><a
+                                    class="e14vpv2g1 gamut-21yh0b-ResetElement-Anchor-AnchorBase e1bhhzie0"
+                                    routerLink="/usecase">UML use case diagram</a></li>
 
-
-
+                                   
+                                        <li class="gamut-9ngeen-Box eykdu411">
+                                            <div aria-current="page" class="gamut-1up4yt5-Box eykdu410">Quiz</div>
+                                        </li>
+                           
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-        <div class="gamut-kn6bbx-Column">
-            <div class="gamut-kn6bbx-Column e1y0e4q30">
-                <div class="gamut-17hayrg-Box ebnwbv90">
+    <div class="gamut-xf8c29-Column ">
+        <div class="card justify-content-between headeing-div">
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="d-flex justify-content-between p-3">
+                        <div class="image">
+                            <h1 class="m-0 " ><span class="text-primary"><i class="fa fa-book-reader mr-3"></i>ABBASSI</span>COURSES</h1>
+                        </div>
+                        <div class="quiz-header">
+                            <h4 style="font-family: cursive;">UML Quiz!</h4>
+                            <span style="font-style: italic;">name {{name}}</span>
+                        </div>
+                    </div>
 
+                    <ng-container *ngIf="!isQuizCompleted">
+                        <div class="d-flex justify-content-around py-3">
+                            <div class="score">
+                                <h5>{{points}} Points</h5>
+                            </div>
+                            <div class="question-remain">
+                                <span style="font-style: italic;">Question {{currentQuestion+1}} of
+                                    {{questionList.length}}</span>
+                            </div>
+                            <div class="timer">
+                                <h5>{{counter}} sec ⏱</h5>
+                            </div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <div class="question">
+                            <div class="card">
+                                <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+                            </div>
+                        </div>
+                        <div class="">
+                            <ol *ngFor="let option of questionList[currentQuestion]?.options; index as i;">
+                                <li (click)="answer(currentQuestion+1,option)">
+                                    <div appChangeBg [isCorrect]="option.correct" class="card">
+                                       {{i+1}} {{option.text}}
+                                    </div>
+                                </li>
 
-                    <!-- code uml -->
+                            </ol>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <!-- <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"><i
+                                    class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i></button> -->
+                            <button class="btn" (click)="resetQuiz()"><i class="fa fa-refresh text-primary fa-3x"
+                                    aria-hidden="true"></i></button>
+                            <button [disabled]="currentQuestion===questionList.length-1" class="btn" (click)="nextQuestion()"><i
+                                    class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true"></i></button>
+                        </div>
+                    </ng-container>
 
-                    <div class="clear"></div>
-                    <div class="clearer"></div>
-                    <p>Class diagram is a static diagram. It represents the static view of an application. Class diagram
-                        is not only used for visualizing, describing, and documenting different aspects of a system but
-                        also for constructing executable code of the software application.</p>
-                    <p>Class diagram describes the attributes and operations of a class and also the constraints
-                        imposed on the system. The class diagrams are widely used in the modeling of objectoriented
-                        systems because they are the only UML diagrams, which can be mapped directly with
-                        object-oriented languages.</p>
-                    <p>Class diagram shows a collection of classes, interfaces, associations, collaborations, and
-                        constraints. It is also known as a structural diagram.</p>
-                    <h2>Purpose of Class Diagrams</h2>
-                    <p>The purpose of class diagram is to model the static view of an application. Class diagrams are
-                        the only diagrams which can be directly mapped with object-oriented languages and thus widely
-                        used at the time of construction.</p>
-                    <p>UML diagrams like activity diagram, sequence diagram can only give the sequence flow of the
-                        application, however class diagram is a bit different. It is the most popular UML diagram in the
-                        coder community.</p>
-                    <p>The purpose of the class diagram can be summarized as −</p>
-                    <ul class="list">
-                        <li>
-                            <p>Analysis and design of the static view of an application.</p>
-                        </li>
-                        <li>
-                            <p>Describe responsibilities of a system.</p>
-                        </li>
-                        <li>
-                            <p>Base for component and deployment diagrams.</p>
-                        </li>
-                        <li>
-                            <p>Forward and reverse engineering.</p>
-                        </li>
-                    </ul>
+                    <ng-container *ngIf="isQuizCompleted" >
+                        <button onclick="view()" >.</button>
+                        <div class="row d-flex justify-content-between">
+                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                           
+                            <div class="result text-center col-md-12 col-sm-12">
+                            
+                                <p>Total Question Attempted : {{questionList.length}} </p>
+                                <p>Total Correct Answered :  <span id="correct">{{correctAnswer}}</span> </p>
+                                <p>Total Wrong Answered : <span id="incorrect">{{inCorrectAnswer}}</span> </p>
+                                <p>Your Score : {{points}} Points </p>
+                                <button [hidden]="points >= 70" class="btn btn-primary" onclick="window.location.reload();">reload</button>
+                                <button [hidden]="points < 70" class="btn btn-success" (click)="getCertif()">Get certificate</button>
+                           <br>
+                            </div>
+                        </div>
+                    </ng-container>
 
-                    <p>Class diagrams are the most popular UML diagrams used for construction of software
-                        applications. It is very important to learn the drawing procedure of class diagram.</p>
-                    <p>Class diagrams have a lot of properties to consider while drawing but here the diagram will be
-                        considered from a top level view.</p>
-                    <p>Class diagram is basically a graphical representation of the static view of the system and
-                        represents different aspects of the application. A collection of class diagrams represent the
-                        whole system.</p>
-                    <p>The following points should be remembered while drawing a class diagram −</p>
-                    <ul class="list">
-                        <li>
-                            <p>The name of the class diagram should be meaningful to describe the aspect of the system.
-                            </p>
-                        </li>
-                        <li>
-                            <p>Each element and their relationships should be identified in advance.</p>
-                        </li>
-                        <li>
-                            <p>Responsibility (attributes and methods) of each class should be clearly identified</p>
-                        </li>
-                        <li>
-                            <p>For each class, minimum number of properties should be specified, as unnecessary
-                                properties will make the diagram complicated.</p>
-                        </li>
-                        <li>
-                            <p>Use notes whenever required to describe some aspect of the diagram. At the end of the
-                                drawing it should be understandable to the developer/coder.</p>
-                        </li>
-                        <li>
-                            <p>Finally, before making the final version, the diagram should be drawn on plain paper and
-                                reworked as many times as possible to make it correct.</p>
-                        </li>
-                    </ul>
-                    <p>The following diagram is an example of an Order System of an application. It describes a
-                        particular aspect of the entire application.</p>
-                    <ul class="list">
-                        <li>
-                            <p>First of all, Order and Customer are identified as the two elements of the system. They
-                                have a one-to-many relationship because a customer can have multiple orders.</p>
-                        </li>
-                        <li>
-                            <p>Order class is an abstract class and it has two concrete classes (inheritance
-                                relationship) SpecialOrder and NormalOrder.</p>
-                        </li>
-                        <li>
-                            <p>The two inherited classes have all the properties as the Order class. In addition,
-                                they have additional functions like dispatch () and receive ().</p>
-                        </li>
-                    </ul>
-                    <p>The following class diagram has been drawn considering all the points mentioned above.</p>
-                    <img src="https://www.tutorialspoint.com/uml/images/uml_class_diagram.jpg" alt="UML Class Diagram">
-                    <h2>Where to Use Class Diagrams?</h2>
-                    <p>Class diagram is a static diagram and it is used to model the static view of a system. The static
-                        view describes the vocabulary of the system.</p>
-                    <p>Class diagram is also considered as the foundation for component and deployment diagrams. Class
-                        diagrams are not only used to visualize the static view of the system but they are also used to
-                        construct the executable code for forward and reverse engineering
-                        of any system.</p>
-                    <p>Generally, UML diagrams are not directly mapped with any object-oriented programming languages
-                        but the class diagram is an exception.</p>
-                    <p>Class diagram clearly shows the mapping with object-oriented languages such as Java, C++, etc.
-                        From practical experience, class diagram is generally used for construction purpose.</p>
-                    <p>In a nutshell it can be said, class diagrams are used for −</p>
-                    <ul class="list">
-                        <li>
-                            <p>Describing the static view of the system.</p>
-                        </li>
-                        <li>
-                            <p>Showing the collaboration among the elements of the static view.</p>
-                        </li>
-                        <li>
-                            <p>Describing the functionalities performed by the system.</p>
-                        </li>
-                        <li>
-                            <p>Construction of software applications using object oriented languages.</p>
-                        </li>
-                    </ul>
-                 
-
-                </div>
-
-                <!-- fincode  -->
-
-
-                <div class="gamut-z3tvln-FlexBox e13szy5e0">
-                    <p><a class="e1w6mdco0 gamut-syg06f-ResetElement-createButtonComponent e1bhhzie0"
-                            href="/learn/learn-java/modules/learn-java-hello-world/cheatsheet"><svg viewBox="0 0 16 16"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" role="img" aria-hidden="true"
-                                class="gamut-1uygofi eol2zvm0">
-                                <title>Mini Arrow Left Icon</title>
-                                <path
-                                    d="M14.8 6.8H4.098l1.95-1.952a1.2 1.2 0 00-1.696-1.696l-4 4a1.198 1.198 0 000 1.696l4 4a1.2 1.2 0 101.696-1.696L4.098 9.2H14.8a1.2 1.2 0 000-2.4z">
-                                </path>
-                            </svg>Previous</a></p>
-                    <p> <button class="e1w6mdco0 gamut-syg06f-ResetElement-createButtonComponent e1bhhzie0"
-                            class="btn btn-info">Next </button><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16" fill="currentColor" role="img" aria-hidden="true"
-                            class="gamut-yd493d eol2zvm0">
-                            <title>Mini Arrow Right Icon</title>
-                            <path
-                                d="M11.665 3.192l4 4a1.143 1.143 0 010 1.616l-4 4a1.143 1.143 0 01-1.616-1.616l1.561-1.561a.286.286 0 00-.202-.488H1.143a1.143 1.143 0 010-2.286h10.265a.286.286 0 00.202-.488l-1.56-1.561a1.143 1.143 0 011.615-1.616z">
-                            </path>
-                        </svg></p>
                 </div>
             </div>
-
         </div>
-
-
+        <!-- </div>
+</div>
+</div> -->
     </div>

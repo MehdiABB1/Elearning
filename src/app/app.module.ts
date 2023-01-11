@@ -22,6 +22,9 @@ import { UmlArchitectureComponent } from './uml-architecture/uml-architecture.co
 import { UmlStandardComponent } from './uml-standard/uml-standard.component';
 import { UmlClassComponent } from './uml-class/uml-class.component';
 import { UmlUseCaseComponent } from './uml-use-case/uml-use-case.component';
+import { QuizUmlComponent } from './quiz-uml/quiz-uml.component';
+import { UmlDetailComponent } from './uml-detail/uml-detail.component';
+import { UmlCertifComponent } from './uml-certif/uml-certif.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { UmlUseCaseComponent } from './uml-use-case/uml-use-case.component';
     UmlArchitectureComponent,
     UmlStandardComponent,
     UmlClassComponent,
-    UmlUseCaseComponent
+    UmlUseCaseComponent,
+    QuizUmlComponent,
+    UmlDetailComponent,
+    UmlCertifComponent
   ],
   imports: [
   

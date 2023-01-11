@@ -1,25 +1,39 @@
+<br>
 <div class="container-fluid mt-10 flex align-content-center justify-center ">
   <div class="bg-white p-8 border rounded-3xl border-slate-300 shadow-lg shadow-gray-500/50  sm:w-full mx-5 lg:w-5/6 ">
-    <h1 class="text-4xl font-extrabold text-left">Welcome to Quizz App</h1>
-    <p class="text-left text-lg"> This quiz will contain total 9 questions. Each question holds 10 points</p>
-    <h4 class="text-2xl font-bold mt-5">Rules:</h4>
-    <ol class="list-decimal ml-5 text-lg">
-      <li>Correct Question gives you 10 points</li>
-      <li>Incorrect Question gives you -10 points</li>
-      <li>You will have 10sec to answer each question</li>
-      <li>Refreshing the page will reset the question</li>
-    </ol>
-    <h1 class="text-center font-semibold text-4xl">All the best!</h1>
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/page-header.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h1 class="card-title text-4xl font-extrabold text-left">Welcome to Java Cours</h1>
+        <p class="card-text text-left text-lg">This course will contain several lessons and a final quiz so you can get certified.</p>
+        <div class="flex justify-center">
+          <div class="flex flex-row flex-wrap justify-center sm:w-full md:w-11/12 lg:w-1/2">
+       
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">First and last name</span>
+            </div>
+            <input type="text" #name class="form-control">
+            <input type="text" #lastname class="form-control">
+          </div>
+          <br>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" #email id="inputGroup-sizing-default">Email</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+            <div class="flex flex-row flex-wrap justify-center sm:w-full md:w-11/12 lg:w-1/2">
+              <button
+              class="col-3 transition  ease-in-out delay-150 form-group bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 shadow-lg shadow-blue-500/50 py-2 px-3 rounded-lg font-bold text-white hover:bg-blue-600 bg-primary "
+               (click)="startQuiz()">Start the
+              course</button>
+         </div>
 
-    <div class="flex justify-center">
-      <div class="flex flex-row flex-wrap justify-center sm:w-full md:w-11/12 lg:w-1/2">
-        <input placeholder="Enter your Name" #name
-          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-100 focus:outline-none focus:shadow-lg focus:ring-0 ring-offset-current ring-offset-1 ring-gray-400">
-        <button
-          class="transition mt-5 ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 shadow-lg shadow-blue-500/50 py-2 px-3 rounded-lg font-bold text-white hover:bg-blue-600 "
-           (click)="startQuiz()">Start the
-          quiz</button>
+        </div>
+       
       </div>
-    </div>
   </div>
 </div>
+
+

@@ -4,14 +4,12 @@ import { interval } from 'rxjs';
 import { QuestionService } from '../service/question.service';
 
 @Component({
-  selector: 'app-questions',
-  templateUrl: './questions.component.html',
-  styleUrls: ['./questions.component.scss']
+  selector: 'app-quiz-uml',
+  templateUrl: './quiz-uml.component.html',
+  styleUrls: ['./quiz-uml.component.scss']
 })
-export class QuestionsComponent implements OnInit {
-
+export class QuizUmlComponent implements OnInit{
   public name: string = "";
-  public lastname: string = "";
   public questionList: any = [];
   public currentQuestion: number = 0;
   public points: number = 0;
@@ -26,12 +24,11 @@ export class QuestionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.name = localStorage.getItem("name")!;
-    this.lastname = localStorage.getItem("lastname")!;
     this.getAllQuestions();
     this.startCounter();
   }
   getAllQuestions() {
-    this.questionService.getQuestionJson()
+    this.questionService.getQuestionUMLjson()
       .subscribe(res => {
         this.questionList = res.questions;
         console.log(res);
@@ -111,9 +108,10 @@ export class QuestionsComponent implements OnInit {
   }
 
   getCertif(){
-    this.router.navigate(['certif']);
+    this.router.navigate(['umlcertif']);
   }
   reload(){
     window.location.reload();
   }
+
 }
